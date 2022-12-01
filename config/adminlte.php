@@ -307,9 +307,9 @@ return [
         //     'text' => 'search',
         // ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Dashboard',
+            'url'  => 'dashboard',
+            'icon'  => 'fa fa-line-chart',
         ],
         [
             'text'        => 'Reservation',

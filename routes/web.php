@@ -20,9 +20,9 @@ use App\Http\Controllers\ReservationController;
 //     return view('welcome');
 // });
 
-Route::get('/',[HomeController::class,"index"]);
+Route::get('/',[HomeController::class,"index"])->name('home_index');
 
-
+Route::post('reservation_create',[HomeController::class,"reservation_create"])->name('reservation_create');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     Route::get('redirects',[HomeController::class,"redirects"]);
@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'redirects'])->name('redirects');
 
     Route::resource('reservations','App\Http\Controllers\ReservationController');
+
+    Route::get('dashboard','App\Http\Controllers\HomeController@dashboard');
 });
 
 Route::get('users',[UserController::class,'users']);

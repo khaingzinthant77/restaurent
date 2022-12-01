@@ -14,7 +14,23 @@ class ReservationController extends Controller
      */
     public function index(Request $request)
     {
+        // dd($request->all());
         $reservations = new Reservation();
+
+        if ($request->keyword != null) {
+            $reservations = $reservations->where('name','like','%'.$request->keyword.'%')->orwhere('phone_no','like','%'.$request->keyword.'%')->orwhere('email','like','%'.$request->keyword.'%');
+        }
+
+        if ($request->from_date != null && $request->to_date != null) {
+            $from_date = date('Y-m-d',strtotime($request->from_date));
+            $to_date = date('Y-m-d',strtotime($request->to_date));
+
+            $reservations = $reservations->whereBetween('date',[$from_date,$to_date]);
+        }
+
+        if ($request->month != null) {
+            $reservations = $reservations->whereMonth('date',$request->month);
+        }
         $count = $reservations->get()->count();
 
         $reservations = $reservations->orderBy('created_at', 'desc')->paginate(10);

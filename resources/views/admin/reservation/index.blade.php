@@ -22,15 +22,36 @@
 @stop
 @section('content')
     <?php
-        $town_name = isset($_GET['town_name'])?$_GET['town_name']:'';
-
+        $keyword = isset($_GET['keyword'])?$_GET['keyword']:'';
+        $from_date = isset($_GET['from_date'])?$_GET['from_date']:'';
+        $to_date = isset($_GET['to_date'])?$_GET['to_date']:'';
     ?>
         <form action="" method="get" accept-charset="utf-8" class="form-horizontal">
             <div class="row form-group">
                 <div class="col-md-11">
                     <div class="row">
                         <div class="col-md-2">
-                            <input type="text" name="town_name" id="town_name" value="{{ old('town_name',$town_name) }}" class="form-control" placeholder="Search...">
+                            <input type="text" name="keyword" id="keyword" value="{{ old('keyword',$keyword) }}" class="form-control" placeholder="Search...">
+                        </div>
+                        <div class="col-md-2">
+                            <div id="filterDate2">    
+                              <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                <input  name="from_date" id="from_date" type="text" class="form-control" placeholder="From Date" value="{{old('from_date',$from_date)}}">
+                                <div class="input-group-addon" >
+                                  <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                              </div>
+                            </div> 
+                        </div>
+                        <div class="col-md-2">
+                            <div id="filterDate2">    
+                              <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                <input  name="to_date" id="to_date" type="text" class="form-control" placeholder="To Date" value="{{old('to_date',$to_date)}}">
+                                <div class="input-group-addon" >
+                                  <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                              </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -76,7 +97,7 @@
             
             </table>
             <div align="center">
-                <p>Total -1</p>
+                <p>Total - {{$count}}</p>
           </div>
        </div>
     </div>
@@ -84,12 +105,43 @@
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}">
+
+<link rel="stylesheet" href="{{asset('assets/css/owl-carousel.css')}}">
+
+<link rel="stylesheet" href="{{asset('assets/css/lightbox.css')}}">
+
 @stop
 
 @section('js')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
+<script src="{{asset('assets/js/jquery-2.1.0.min.js')}}"></script>
+
+<!-- Bootstrap -->
+<script src="{{asset('assets/js/popper.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+
+<!-- Plugins -->
+<script src="{{asset('assets/js/owl-carousel.js')}}"></script>
+<script src="{{asset('assets/js/accordions.js')}}"></script>
+<script src="{{asset('assets/js/datepicker.js')}}"></script>
+<script src="{{asset('assets/js/scrollreveal.min.js')}}"></script>
+<script src="{{asset('assets/js/waypoints.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+<script src="{{asset('assets/js/imgfix.min.js')}}"></script> 
+<script src="{{asset('assets/js/slick.js')}}"></script> 
+<script src="{{asset('assets/js/lightbox.js')}}"></script> 
+<script src="{{asset('assets/js/isotope.js')}}"></script> 
+
+<!-- Global Init -->
+<script src="{{asset('assets/js/custom.js')}}"></script>
+
 <script> 
     @if(Session::has('success'))
             toastr.options =
@@ -120,10 +172,16 @@
             }); 
         });
         $(function() {
-          $('table').on("click", "tr.table-tr", function() {
-            window.location = $(this).data("url");
-          });
-        });
+              $('table').on("click", "tr.table-tr", function() {
+                window.location = $(this).data("url");
+              });
+            });
+            $('#from_date').change(function(){
+                this.form.submit();
+            });
+            $('#to_date').change(function(){
+                this.form.submit();
+            });
         });
      </script>
 @stop

@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
     <title>Klassy Cafe</title>
 <!--
     
@@ -59,17 +61,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
-                           	
-                        <!-- 
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
+                   
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                             <li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
                             <!-- <li class="submenu">
@@ -83,31 +75,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li> -->
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li>
-                            <!-- <li>
-                                @if (Route::has('login'))
-                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                    @auth
-                                        <li>
-                                          
-                                            <x-app-layout>
-
-                                            </x-app-layout>
-                                        </li>
-
-                                    @else
-                                        <li>
-                                            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-                                        </li>
-
-                                        @if (Route::has('register'))
-                                            <li>
-                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                            </li>
-                                        @endif
-                                    @endauth
-                                </div>
-                            @endif
-                            </li>  -->
+                            
                         </ul>        
                         <a class='menu-trigger'>
                             <!-- <span>Menu</span> -->
@@ -177,7 +145,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <h6>About Us</h6>
                             <h2>We Leave A Delicious Memory For You</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <p>Klassy Cafe is one of the best restaurant , we provide you with customize service. <br>Whatever you want to have a party or a family meal,we are here to serve you.</p>
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
@@ -396,7 +364,8 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <form id="contact" action="" method="post">
+                        <form id="contact" action="{{route('reservation_create')}}" method="post">
+                            @csrf
                           <div class="row">
                             <div class="col-lg-12">
                                 <h4>Table Reservation</h4>
@@ -418,7 +387,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </div>
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
-                                <select value="number-guests" name="number-guests" id="number-guests">
+                                <select value="number-guests" name="number_guests" id="number_guests">
                                     <option value="number-guests">Number Of Guests</option>
                                     <option name="1" id="1">1</option>
                                     <option name="2" id="2">2</option>
@@ -791,8 +760,18 @@ https://templatemo.com/tm-558-klassy-cafe
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
-    <script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>
+        @if(Session::has('success'))
+            toastr.options =
+            {
+            "closeButton" : true,
+            "progressBar" : true
+            }
+            toastr.success("{{ session('success') }}");
+        @endif
+        
         $(function() {
             var selectedClass = "";
             $("p").click(function(){
