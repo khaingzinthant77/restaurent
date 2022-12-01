@@ -15,8 +15,11 @@ class HomeController extends Controller
 
     public function redirects()
     {
-        // dd("Here");
-        return view('welcome');
+        $today_reservation = Reservation::where('date',date('Y-m-d'))->get()->count();
+        // dd($today_reservation);
+        $monthly_reservation = Reservation::whereMonth('date',date('m'))->get()->count();
+        $total_reservation = Reservation::get()->count();
+        return view('admin.dashboard',compact('today_reservation','monthly_reservation','total_reservation'));
     }
 
     public function dashboard()
