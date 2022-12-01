@@ -146,6 +146,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <h2>We Leave A Delicious Memory For You</h2>
                         </div>
                         <p>Klassy Cafe is one of the best restaurant , we provide you with customize service. <br>Whatever you want to have a party or a family meal,we are here to serve you.</p>
+                        <!-- <p></p> -->
                         <div class="row">
                             <div class="col-4">
                                 <img src="assets/images/about-thumb-01.jpg" alt="">
