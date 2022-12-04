@@ -195,7 +195,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$14</h6></div>
                             <div class='info'>
                               <h1 class='title'>Chocolate Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'>It is a cake that will melt with every bite and will leave you enchanted by its taste</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
@@ -207,7 +207,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$22</h6></div>
                             <div class='info'>
                               <h1 class='title'>Klassy Pancake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'>Make a difference in someone's life this year by bringing them this amazing shaped pancake.</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
@@ -219,7 +219,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$18</h6></div>
                             <div class='info'>
                               <h1 class='title'>Tall Klassy Bread</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'>This cake is made up of vanilla extracts, soft moist bread on it</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
@@ -231,7 +231,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$10</h6></div>
                             <div class='info'>
                               <h1 class='title'>Blueberry CheeseCake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'> It is an utterly delicious and elegant cake for all occasions.</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
@@ -243,7 +243,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$8.50</h6></div>
                             <div class='info'>
                               <h1 class='title'>Klassy Cup Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'>Really great cupcakes. There are so many flavors to choose from.</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
@@ -255,7 +255,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             <div class="price"><h6>$7.25</h6></div>
                             <div class='info'>
                               <h1 class='title'>Klassic Cake</h1>
-                              <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
+                              <p class='description'>This cake makes an ideal match for your loved one's birthday or any other occasion</p>
                               <div class="main-text-button">
                                   <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                               </div>
