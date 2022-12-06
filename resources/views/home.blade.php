@@ -359,7 +359,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                    <span><a href="#">klassy@gmail.com</a><br><a href="#">klassyinfo@gmail.com</a></span>
                                 </div>
                             </div>
                         </div>
@@ -380,12 +380,12 @@ https://templatemo.com/tm-558-klassy-cafe
                             </div>
                             <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="" style="text-transform:lowercase;">
                             </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                                <input name="phone" type="number" id="phone" placeholder="Phone Number*" required="">
                               </fieldset>
                             </div>
                             <div class="col-md-6 col-sm-12">
@@ -484,7 +484,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-01.png" alt="">
                                                             <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Serve a bright plate of goodness with our chicken salad recipes, including chicken caesar, and warm chicken salads.</p>
                                                             <div class="price">
                                                                 <h6>$10.50</h6>
                                                             </div>
@@ -494,7 +494,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-02.png" alt="">
                                                             <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Fresh orange juice takes a little work, but it tastes much better than orange juice from concentrate.</p>
                                                             <div class="price">
                                                                 <h6>$8.50</h6>
                                                             </div>
@@ -504,7 +504,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-03.png" alt="">
                                                             <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>This fruit salad is perfect for a backyard bbq or any occasion. There are never leftovers! </p>
                                                             <div class="price">
                                                                 <h6>$9.90</h6>
                                                             </div>
@@ -520,7 +520,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-04.png" alt="">
                                                             <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Easy and filling egg white omelette stuffed with veggies and tangy feta.</p>
                                                             <div class="price">
                                                                 <h6>$6.50</h6>
                                                             </div>
@@ -766,14 +766,14 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script>
-        @if(Session::has('success'))
-            toastr.options =
-            {
-            "closeButton" : true,
-            "progressBar" : true
-            }
-            toastr.success("{{ session('success') }}");
-        @endif
+        // @if(Session::has('success'))
+        //     toastr.options =
+        //     {
+        //     "closeButton" : true,
+        //     "progressBar" : true
+        //     }
+        //     toastr.success("{{ session('success') }}");
+        // @endif
         
         $(function() {
             var selectedClass = "";
