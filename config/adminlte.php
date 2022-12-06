@@ -317,17 +317,17 @@ return [
             'icon'        => 'far fa-fw fa-file',
             
         ],
-        // ['header' => 'account_settings'],
-        // [
-        //     'text' => 'profile',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-user',
-        // ],
-        // [
-        //     'text' => 'change_password',
-        //     'url'  => 'admin/settings',
-        //     'icon' => 'fas fa-fw fa-lock',
-        // ],
+        ['header' => 'account_settings'],
+        [
+            'text' => 'profile',
+            'url'  => 'profile',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'change_password',
+            'url'  => 'change_password',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
         // [
         //     'text'    => 'multilevel',
         //     'icon'    => 'fas fa-fw fa-share',

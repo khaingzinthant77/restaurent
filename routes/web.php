@@ -34,6 +34,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('reservations','App\Http\Controllers\ReservationController');
 
     Route::get('dashboard','App\Http\Controllers\HomeController@dashboard');
+
+    Route::get('profile','App\Http\Controllers\UserController@profile')->name('profile');
+
+    Route::get('change_password','App\Http\Controllers\UserController@change_password')->name('change_password');
+
+    Route::post('update_password','App\Http\Controllers\UserController@update_password')->name('update_password');
 });
 
 Route::get('users',[UserController::class,'users']);
