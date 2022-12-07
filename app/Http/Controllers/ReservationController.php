@@ -130,4 +130,13 @@ class ReservationController extends Controller
         $reservation = Reservation::find($id)->delete();
         return redirect()->route('reservations.index')->with('success','Success');
     }
+
+    public function changestatusactive(Request $request)
+    {
+        $reservation = Reservation::find($request->reservation_id);
+        $reservation->status = $request->status;
+
+        $reservation->save();
+        return response()->json(['success'=>'Status change successfully.']);
+    }
 }

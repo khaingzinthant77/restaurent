@@ -18,6 +18,77 @@
         /*.table-tr tr {
             cursor: pointer;
         }*/
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 22px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 2px;
+            bottom: 0px;
+            top: 3px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 36px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        table.scroll {
+        margin: 4px, 4px;
+        padding: 4px;
+     
+/*        width: 300px;*/
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
     </style>
 @stop
 @section('content')
@@ -72,6 +143,7 @@
                     <th>Number of Guests</th>
                     <th>Date</th>
                     <th>Time</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -85,6 +157,12 @@
                     <td>{{$reservation->num_of_guest}}</td>
                     <td>{{date('d-m-Y',strtotime($reservation->date))}}</td>
                     <td>{{$reservation->time}}</td>
+                    <td>
+                        <label class="switch">
+                            <input data-id="{{$reservation->id}}" data-size ="small" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $reservation->status ? 'checked' : '' }}>
+                                  <span class="slider round"></span>
+                        </label>
+                    </td>
                 </tr>
                 @endforeach
                 @else
@@ -183,5 +261,21 @@
                 this.form.submit();
             });
         });
+
+        $(function() {
+            $('.toggle-class').change(function() {
+                var status = $(this).prop('checked') == true ? 1 : 0; 
+                var reservation_id = $(this).data('id'); 
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "<?php echo(route("change-status-active")) ?>",
+                    data: {'status': status, 'reservation_id': reservation_id},
+                    success: function(data){
+                     console.log(data.success);
+                    }
+                });
+            })
+          });
      </script>
 @stop

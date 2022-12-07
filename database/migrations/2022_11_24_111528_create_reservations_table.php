@@ -22,6 +22,7 @@ class CreateReservationsTable extends Migration
             $table->date('date');
             $table->string('time');
             $table->text('message')->nullable();
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

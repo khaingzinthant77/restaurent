@@ -40,6 +40,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('change_password','App\Http\Controllers\UserController@change_password')->name('change_password');
 
     Route::post('update_password','App\Http\Controllers\UserController@update_password')->name('update_password');
+
+    Route::get('change-status-active', 'App\Http\Controllers\ReservationController@changestatusactive')->name('change-status-active');
 });
 
 Route::get('users',[UserController::class,'users']);
