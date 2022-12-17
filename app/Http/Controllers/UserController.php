@@ -30,27 +30,27 @@ class UserController extends Controller
     {
         // dd($request->all());
         $this->validate($request,[
-            'old_password'=>'required',
+            // 'old_password'=>'required',
             'new_password'=>'required'
         ]);
 
         $data = User::find(auth()->user()->id);
-        // if(! Hash::check($data->password , Input::get('currPassword') ))
-        // {
-        //     return redirect()->route('change_password')->with('error','Old Password does not match!');
-        // }
+        // // if(! Hash::check($data->password , Input::get('currPassword') ))
+        // // {
+        // //     return redirect()->route('change_password')->with('error','Old Password does not match!');
+        // // }
 
-        // if (! Hash::check($request->old_password, $data->password)) {
-        //     return redirect()->route('change_password')->with('error','Old Password does not match!');
-        // }
+        // // if (! Hash::check($request->old_password, $data->password)) {
+        // //     return redirect()->route('change_password')->with('error','Old Password does not match!');
+        // // }
 
-        $hash_old = Hash::make($request->old_password);
+        // $hash_old = Hash::make($request->old_password);
         
-        dd($request->old_password);
+        // dd($request->old_password);
 
-        if ($hash_old != $data->password) {
-            return redirect()->route('change_password')->with('error','Old Password does not match!');
-        }
+        // if ($hash_old != $data->password) {
+        //     return redirect()->route('change_password')->with('error','Old Password does not match!');
+        // }
 
 
         $data = $data->update([

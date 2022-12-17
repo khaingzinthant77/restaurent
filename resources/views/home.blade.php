@@ -429,7 +429,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                <textarea name="message" rows="6" id="message" placeholder="Message"></textarea>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
@@ -520,7 +520,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-04.png" alt="">
                                                             <h4>Eggs Omelette</h4>
-                                                            <p>Easy and filling egg white omelette stuffed with veggies and tangy feta.</p>
+                                                            <p>Eggs Omelette is very delicious.Enjoy it for a lunch or dinner.</p>
                                                             <div class="price">
                                                                 <h6>$6.50</h6>
                                                             </div>
@@ -560,7 +560,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-04.png" alt="">
                                                             <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Eggs Omelette is very delicious.Enjoy it for a lunch or dinner.</p>
                                                             <div class="price">
                                                                 <h6>$14</h6>
                                                             </div>
@@ -569,7 +569,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-05.png" alt="">
-                                                            <h4>Dollma Pire</h4>
+                                                            <h4>Fresh Chicken Salad</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
                                                                 <h6>$18</h6>
@@ -596,7 +596,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-01.png" alt="">
                                                             <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Serve a bright plate of goodness with our chicken salad recipes, including chicken caesar, and warm chicken salads.</p>
                                                             <div class="price">
                                                                 <h6>$10</h6>
                                                             </div>
@@ -606,7 +606,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-02.png" alt="">
                                                             <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Fresh orange juice takes a little work, but it tastes much better than orange juice from concentrate.</p>
                                                             <div class="price">
                                                                 <h6>$20</h6>
                                                             </div>
@@ -616,7 +616,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-03.png" alt="">
                                                             <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>This fruit salad is perfect for a backyard bbq or any occasion. There are never leftovers! </p>
                                                             <div class="price">
                                                                 <h6>$30</h6>
                                                             </div>
@@ -636,7 +636,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-05.png" alt="">
                                                             <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Eggs Omelette is very delicious.Enjoy it for a lunch or dinner.</p>
                                                             <div class="price">
                                                                 <h6>$14</h6>
                                                             </div>
@@ -644,9 +644,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-03.png" alt="">
+                                                            <img src="assets/images/tab-item-02.png" alt="">
                                                             <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Fresh orange juice takes a little work, but it tastes much better than orange juice from concentrate.</p>
                                                             <div class="price">
                                                                 <h6>$18</h6>
                                                             </div>
@@ -654,9 +654,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-02.png" alt="">
+                                                            <img src="assets/images/tab-item-03.png" alt="">
                                                             <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>This fruit salad is perfect for a backyard bbq or any occasion. There are never leftovers! </p>
                                                             <div class="price">
                                                                 <h6>$10</h6>
                                                             </div>
@@ -672,7 +672,7 @@ https://templatemo.com/tm-558-klassy-cafe
                                                         <div class="tab-item">
                                                             <img src="assets/images/tab-item-06.png" alt="">
                                                             <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <p>Serve a bright plate of goodness with our chicken salad recipes, including chicken caesar, and warm chicken salads.</p>
                                                             <div class="price">
                                                                 <h6>$8.50</h6>
                                                             </div>
@@ -764,16 +764,31 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script>
-        // @if(Session::has('success'))
-        //     toastr.options =
-        //     {
-        //     "closeButton" : true,
-        //     "progressBar" : true
-        //     }
-        //     toastr.success("{{ session('success') }}");
-        // @endif
+        @if(Session::has('success'))
+            // toastr.options =
+            // {
+            // "closeButton" : true,
+            // "progressBar" : true
+            // }
+            // toastr.success("{{ session('success') }}");
+        swal({
+              title: `Success`,
+              text: "Your order is accepted.",
+              icon: "success",
+              // buttons: true,
+              // dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              // this.form.submit();
+            }
+          });
+
+        @endif
         
         $(function() {
             var selectedClass = "";

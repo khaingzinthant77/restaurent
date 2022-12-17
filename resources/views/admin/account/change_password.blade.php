@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Reservation')
+@section('title', 'Account')
 
 @section('content_header')
-    <h5 style="color: #fb5849;">Create Reservation</h5>
+    <h5 style="color: #fb5849;">Update Password</h5>
     <style type="text/css">
         .card {
           box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -25,7 +25,7 @@
           @method('post')
           <div class="row form-group">
             
-            <div class="col-lg-6 col-sm-12 form-group">
+            <!-- <div class="col-lg-6 col-sm-12 form-group">
               <fieldset>
                 <label>Old Password</label>
                 <input name="old_password" type="password" id="old_password" placeholder="Old Password" required="" class="form-control" required>
@@ -33,7 +33,7 @@
                     <small>{{ $errors->first('old_password') }}</small>
                 </span>
               </fieldset>
-            </div>
+            </div> -->
             <div class="col-lg-6 col-sm-12 form-group">
               <fieldset>
                 <label>New Password</label>

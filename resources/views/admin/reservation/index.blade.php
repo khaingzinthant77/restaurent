@@ -149,14 +149,14 @@
             <tbody>
                 @if($reservations->count() > 0)
                 @foreach($reservations as $key=>$reservation)
-                <tr class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}" style="cursor: pointer;">
-                    <td>{{++$i}}</td>
-                    <td>{{$reservation->name}}</td>
-                    <td>{{$reservation->email}}</td>
-                    <td>{{$reservation->phone_no}}</td>
-                    <td>{{$reservation->num_of_guest}}</td>
-                    <td>{{date('d-m-Y',strtotime($reservation->date))}}</td>
-                    <td>{{$reservation->time}}</td>
+                <tr style="cursor: pointer;">
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{++$i}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{$reservation->name}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{$reservation->email}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{$reservation->phone_no}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{$reservation->num_of_guest}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{date('d-m-Y',strtotime($reservation->date))}}</td>
+                    <td class="table-tr" data-url="{{route('reservations.show',$reservation->id)}}">{{$reservation->time}}</td>
                     <td>
                         <label class="switch">
                             <input data-id="{{$reservation->id}}" data-size ="small" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $reservation->status ? 'checked' : '' }}>
@@ -250,7 +250,7 @@
             }); 
         });
         $(function() {
-              $('table').on("click", "tr.table-tr", function() {
+              $('table').on("click", "td.table-tr", function() {
                 window.location = $(this).data("url");
               });
             });
